@@ -14,7 +14,30 @@
 <label>Practice focus<select id="focus"><option>Long tones</option><option>Scales</option><option>Rhythm practice</option><option>Concert music</option><option>Etude / solo</option><option>Free practice</option></select></label>
 <label class="wide">What are you working on?<input id="piece" maxlength="80" placeholder="e.g. B-flat concert scale, measures 1–8"></label>
 </div>
-<div class="practice-grid">
+
+<article class="panel tuner-panel">
+  <div class="tuner-head">
+    <div><p class="eyebrow">GET IN TUNE</p><h2>Chromatic tuner</h2></div>
+    <span class="pill">Concert pitch</span>
+  </div>
+  <p class="muted small">Allow microphone access, play one steady note, and hold it for a moment. The tuner listens for one instrument at a time.</p>
+  <div class="tuner-display">
+    <div class="tuner-note" id="tunerNote">—</div>
+    <div class="tuner-frequency" id="tunerFrequency">Waiting for a note</div>
+    <div class="meter">
+      <span class="meter-label left">♭ FLAT</span><span class="meter-label center">IN TUNE</span><span class="meter-label right">SHARP ♯</span>
+      <div class="meter-track"><span class="meter-center"></span><span id="tunerNeedle" class="meter-needle"></span></div>
+      <div class="meter-scale"><span>-50¢</span><span>0¢</span><span>+50¢</span></div>
+    </div>
+    <div id="tunerCents" class="tuner-cents">Play a note to begin</div>
+  </div>
+  <div class="controls tuner-controls">
+    <button id="tunerStart" class="btn primary">Start tuner</button>
+    <button id="tunerStop" class="btn dark" disabled>Stop tuner</button>
+  </div>
+  <p id="tunerHelp" class="help" aria-live="polite">Tip: play a sustained note in a quiet room. The tuner reports concert pitch, not the written note for transposing instruments.</p>
+</article>
+\n<div class="practice-grid">
 <article class="panel recorder"><p class="eyebrow">RECORD YOUR PLAYING</p><h2>Practice recorder</h2><p class="muted small">Use headphones when possible. Find a quiet space, allow microphone access, and play when you're ready.</p>
 <div class="record-status"><span id="recordDot" class="dot"></span><span id="recordStatus" aria-live="polite">Ready to record</span><strong id="timer">00:00</strong></div>
 <div class="controls"><button id="recordBtn" class="btn primary">● Start recording</button><button id="stopBtn" class="btn dark" disabled>■ Stop</button></div>
@@ -27,5 +50,5 @@
 </article></div>
 </section>
 <section id="libraryView" class="hidden"><div class="heading"><div><p class="eyebrow">YOUR PRACTICE HISTORY</p><h2>My recordings</h2></div><span class="pill">Stored on this device</span></div><div id="recordings" class="recordings"></div></section>
-<footer><span>BGMS Band Lab · Version 1.0</span><span>Personal practice tool</span></footer>
+<footer><span>BGMS Band Lab · Version 1.1</span><span>Personal practice tool</span></footer>
 </main><script src="app.js"></script></body></html>

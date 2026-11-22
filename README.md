@@ -1,4 +1,4 @@
-# BGMS Band Lab 1.0
+# BGMS Band Lab 1.1
 
 A free, responsive practice recorder prototype for web, Chromebook, iPhone, and iPad.
 
@@ -8,12 +8,14 @@ A free, responsive practice recorder prototype for web, Chromebook, iPhone, and 
 - Microphone recording, stop, playback preview, and save
 - Local recording library with playback and delete
 - Practice checklist
+- Chromatic tuner with live pitch, frequency, and cents deviation (concert pitch)
 - Responsive layout and installable PWA shell
 - Offline app shell after first successful visit
 
 ## Important limitations
 - Recordings and session details are stored in the browser on the device used. They do not sync between devices and clearing browser data may erase them.
-- This version does not grade pitch or rhythm, upload assignments, or provide student accounts.
+- The tuner is a practice aid, not a graded assessment. Pitch detection can be affected by room noise, instrument harmonics, microphone quality, and very soft notes. It reports concert pitch; transposing-instrument written-pitch display is not included yet.
+- This version does not grade rhythm, upload assignments, or provide student accounts.
 - Microphone recording generally requires HTTPS or localhost. GitHub Pages provides HTTPS.
 - Test with teacher-owned/sample recordings first. Obtain district approval before collecting student-identifiable information or recordings. Follow district policies and applicable student privacy requirements.
 
