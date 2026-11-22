@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#122c34"><meta name="description" content="BGMS Band Lab practice and recording tool"><title>BGMS Band Lab</title><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon.svg"><link rel="stylesheet" href="styles.css"></head>
+<body>
+<header class="topbar"><a class="brand" href="#"><span class="mark">♫</span><span><b>BGMS Band Lab</b><small>Practice • Record • Improve</small></span></a><button id="installBtn" class="btn ghost hidden">Install app</button></header>
+<main class="shell">
+<section class="hero"><div><p class="eyebrow">BETTY GRAY MIDDLE SCHOOL BAND</p><h1>Make every practice count.</h1><p class="muted">A simple space to prepare, record, and review your playing.</p></div><div class="musicmark">♪</div></section>
+<nav class="tabs"><button class="tab active" data-view="practice">Practice room</button><button class="tab" data-view="library">My recordings <span id="count" class="count">0</span></button></nav>
+<section id="practiceView">
+<div class="heading"><div><p class="eyebrow">YOUR PRACTICE SESSION</p><h2>Set up your session</h2></div><span class="pill">Saved on this device</span></div>
+<div class="panel setup">
+<label>Student name or initials<input id="student" maxlength="40" placeholder="e.g. Jordan or J.S."></label>
+<label>Ensemble<select id="ensemble"><option>Beginning Band</option><option>7th Grade Band</option><option>8th Grade Band</option><option>Symphonic Band</option><option>Betty Groove Jazz Band</option><option>Personal practice</option></select></label>
+<label>Instrument<select id="instrument"><option>Flute</option><option>Oboe</option><option>Bassoon</option><option>B♭ Clarinet</option><option>Bass Clarinet</option><option>Alto Saxophone</option><option>Tenor Saxophone</option><option>Baritone Saxophone</option><option>B♭ Trumpet</option><option>French Horn</option><option>Trombone</option><option>Euphonium</option><option>Tuba</option><option>Violin</option><option>Viola</option><option>Cello</option><option>Double Bass</option><option>Percussion</option></select></label>
+<label>Practice focus<select id="focus"><option>Long tones</option><option>Scales</option><option>Rhythm practice</option><option>Concert music</option><option>Etude / solo</option><option>Free practice</option></select></label>
+<label class="wide">What are you working on?<input id="piece" maxlength="80" placeholder="e.g. B-flat concert scale, measures 1–8"></label>
+</div>
+<div class="practice-grid">
+<article class="panel recorder"><p class="eyebrow">RECORD YOUR PLAYING</p><h2>Practice recorder</h2><p class="muted small">Use headphones when possible. Find a quiet space, allow microphone access, and play when you're ready.</p>
+<div class="record-status"><span id="recordDot" class="dot"></span><span id="recordStatus" aria-live="polite">Ready to record</span><strong id="timer">00:00</strong></div>
+<div class="controls"><button id="recordBtn" class="btn primary">● Start recording</button><button id="stopBtn" class="btn dark" disabled>■ Stop</button></div>
+<p id="micHelp" class="help">Your browser will ask for microphone permission the first time.</p>
+<div id="previewWrap" class="preview hidden"><label>Review your take</label><audio id="preview" controls></audio><button id="saveBtn" class="btn primary full">Save recording</button></div>
+</article>
+<article class="panel session"><p class="eyebrow">PRACTICE ROUTINE</p><h2>Today's checklist</h2><p class="muted small">Check off each item as you complete it.</p>
+<label class="check"><input type="checkbox"> Set up instrument and music</label><label class="check"><input type="checkbox"> Warm up with long tones</label><label class="check"><input type="checkbox"> Practice assigned material slowly</label><label class="check"><input type="checkbox"> Play again at performance tempo</label><label class="check"><input type="checkbox"> Record and review a take</label>
+<div class="tip"><b>Practice tip</b><p>Start slowly. Focus on a steady air stream, good tone, and accurate rhythm before increasing tempo.</p></div>
+</article></div>
+</section>
+<section id="libraryView" class="hidden"><div class="heading"><div><p class="eyebrow">YOUR PRACTICE HISTORY</p><h2>My recordings</h2></div><span class="pill">Stored on this device</span></div><div id="recordings" class="recordings"></div></section>
+<footer><span>BGMS Band Lab · Version 1.0</span><span>Personal practice tool</span></footer>
+</main><script src="app.js"></script></body></html>
